@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/dados-principais.css">
+    <link rel="stylesheet" href="style/dados-producao.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="script/main.js"></script>
+    <script src="script/dados-principais.js"></script>
+    <script src="script/dados-producao.js"></script>
+
+</head>
+<body>
+
+    <div class="jumbotron">
+
+        <div class="logo-img">
+            <img src="imagens/tabela.jpg">
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <div class="box-tab">
+
+                    <div class="guia header-dados-receita">
+                        Dados Principais
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </div>
+
+                    <div class="body-page">
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="info-receita">
+                                    <input type="text" placeholder="Nome da receita">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="info-receita">
+                                    <input class="qtdPorcao" type="text" placeholder="Quantidade de porcoes">
+                                    <div class="desc-info">Qtd. de porcoes</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="info-receita">
+                                    <input class="pesoPorcao" type="text" placeholder="Peso de cada porcao">
+                                    <div class="desc-info">Peso por porcao</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="info-receita">
+                                    <input type="text" placeholder="Quantidade produzida" disabled>
+                                    <div class="desc-info">Peso total da receita</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-8">
+                                <button type="button" class="btn btn-success btn-block btn-dados-receita">Iniciar producao da tabela</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <br /><br />
+
+                <div class="box-tab box-blur" id="box-producao">
+
+                    <div class="guia btn-dados-producao">Dados de Producao <span class="glyphicon glyphicon-plus"></span></div>
+
+                    <div class="body-page" id="body-ingrediente">
+
+                        <div class="producao-options options-js">
+                            <span class="label label-danger">Novo ingrediente <span class="glyphicon glyphicon-plus"></span></span>
+                        </div>
+
+                        <div class="producao-box">
+
+                            <div class="row">
+                                <div class="linha-ingredientes">
+                                    <div class="col-md-3 col-sm-3">
+                                        <div class="info-receita producao">
+                                            <input type="text" name="nomeIngrediente" placeholder="Nome do ingrediente">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <div class="info-receita producao">
+                                            <select class="info-receita">
+                                                <option value="" >Medida caseira</option>
+                                                <option value="xícara" >xícara</option>
+                                                <option value="colher de sopa" >colher de sopa</option>
+                                                <option value="colher de chá" >colher de chá</option>
+                                                <option value="copo americano" >copo americano</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <div class="info-receita producao">
+                                            <input class="brutoCoccao" type="text" placeholder="Peso Bruto">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <div class="info-receita producao">
+                                            <input class="liquidoCoccao" type="text" placeholder="Peso liquido" name="pesoLiquidoPercapto">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <div class="info-receita producao">
+                                            <input class="valorCoccao" type="text" placeholder="Coccao" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-sm-1">
+                                    <div class="toggle-valida">
+                                        <button type="button" class="btn btn-success btn-block btn-sm" style="display:block">
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-block btn-sm drop-line" style="display:none">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="producao-custo">
+                                    <div class="col-md-1 col-sm-1" style="text-align: center;font-size: 28px;">
+                                        <span class="glyphicon glyphicon-usd"></span>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <div class="info-receita producao">
+                                            <input class="custoKilo" type="text" placeholder="Custo por kilo">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <span>Valor gasto:</span>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <div class="info-receita producao">
+                                            <input class="custoTotalIngr" type="text" placeholder="Valor usado" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="resultado-producao">
+                            <div class="row">
+
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="info-receita producao-result" data-producao="coccaoY">0</div>
+                                    <div class="desc-info">Fator de Coccao y</div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="info-receita producao-result" data-producao="liquedoPorcao">0</div>
+                                    <div class="desc-info">Peso bruto por porcao</div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="info-receita producao-result" data-producao="liquedoPorcao">0</div>
+                                    <div class="desc-info">Peso liquido por porcao</div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="info-receita producao-result" data-producao="brutoTotal">0</div>
+                                    <div class="desc-info">Peso bruto total</div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="info-receita producao-result" data-producao="liquidoTotal">0</div>
+                                    <div class="desc-info">Peso liquido total</div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="info-receita producao-result" data-producao="CustoTotal">0</div>
+                                    <div class="desc-info">Custo total</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

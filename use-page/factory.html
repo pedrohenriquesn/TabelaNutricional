@@ -1,0 +1,69 @@
+<div class="producao-box">
+
+    <div class="row">
+        <div class="linha-ingredientes">
+            <div class="col-md-3 col-sm-3">
+                <div class="info-receita producao">
+                    <input type="text" name="nomeIngrediente" placeholder="Nome do ingrediente">
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="info-receita producao">
+                    <select class="info-receita">
+                        <option value="" >Medida caseira</option>
+                        <option value="xícara" >xícara</option>
+                        <option value="colher de sopa" >colher de sopa</option>
+                        <option value="colher de chá" >colher de chá</option>
+                        <option value="copo americano" >copo americano</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="info-receita producao">
+                    <input class="brutoCoccao" type="text" placeholder="Peso Bruto">
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="info-receita producao">
+                    <input class="liquidoCoccao" type="text" placeholder="Peso liquido" name="pesoLiquidoPercapto">
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="info-receita producao">
+                    <input class="valorCoccao" type="text" placeholder="Coccao" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-1">
+            <div class="toggle-valida">
+                <button type="button" class="btn btn-success btn-block btn-sm" style="display:block">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger btn-block btn-sm drop-line" style="display:none">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="producao-custo">
+            <div class="col-md-1 col-sm-1" style="text-align: center;font-size: 28px;">
+                <span class="glyphicon glyphicon-usd"></span>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <div class="info-receita producao">
+                    <input class="custoKilo" type="text" placeholder="Custo por kilo">
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <span>Valor gasto:</span>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <div class="info-receita producao">
+                    <input class="custoTotalIngr" type="text" placeholder="Valor usado" disabled>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
